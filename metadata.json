@@ -1,0 +1,6 @@
+{
+  "name": "Kigali Materials Copy Audit & Grounding Guardrail",
+  "description": "Gemini structured prompt solution auditing and cleaning web copy for Construction and Materials supply in Kigali, Rwanda against verified business facts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
