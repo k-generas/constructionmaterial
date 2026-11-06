@@ -244,24 +244,24 @@ export const QuoteRequestPage: React.FC<QuoteRequestPageProps> = ({
   }
 
   return (
-    <div className="py-8 sm:py-14 max-w-4xl mx-auto px-4 sm:px-6">
+    <div className="py-6 sm:py-8 lg:py-14 max-w-4xl mx-auto px-4 sm:px-6">
       {/* Title Header */}
-      <div className="mb-8">
-        <span className="text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400">
+      <div className="mb-6 sm:mb-8">
+        <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400">
           Commercial &amp; Residential Quotations
         </span>
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1">
+        <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1">
           Request a Building Materials Quotation
         </h1>
-        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-2xl leading-relaxed">
+        <p className="text-[10px] sm:text-xs lg:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-2xl leading-relaxed">
           Submit your required construction materials, quantities, and preferred job site delivery location in Kigali. Our sales team will prepare a formal price quotation with transport estimates.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
         {/* Left Form (8 Cols) */}
         <div className="lg:col-span-8">
-          <form onSubmit={handleSubmit} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 sm:p-7 space-y-6 shadow-xs transition-colors duration-200">
+          <form onSubmit={handleSubmit} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-4 sm:p-5 lg:p-7 space-y-4 sm:space-y-6 shadow-xs transition-colors duration-200">
             {errorMsg && (
               <div className="p-3.5 rounded-xl bg-rose-50 dark:bg-rose-950/80 border border-rose-200 dark:border-rose-800 text-rose-800 dark:text-rose-200 text-xs flex items-center gap-2">
                 <AlertTriangle className="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
@@ -270,14 +270,14 @@ export const QuoteRequestPage: React.FC<QuoteRequestPageProps> = ({
             )}
 
             {/* 1. Customer Details */}
-            <div className="space-y-4">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-slate-800 dark:text-slate-300 pb-2 border-b border-slate-200 dark:border-slate-800 flex items-center gap-2">
+            <div className="space-y-3 sm:space-y-4">
+              <h3 className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-800 dark:text-slate-300 pb-2 border-b border-slate-200 dark:border-slate-800 flex items-center gap-2">
                 <span>1. Contact &amp; Builder Information</span>
               </h3>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
-                  <label className="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block text-[10px] sm:text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">
                     Your Name or Company <span className="text-amber-600 dark:text-amber-400">*</span>
                   </label>
                   <input
@@ -286,12 +286,12 @@ export const QuoteRequestPage: React.FC<QuoteRequestPageProps> = ({
                     value={customerName}
                     onChange={(e) => setCustomerName(e.target.value)}
                     placeholder="e.g. Alexis Habimana / Alpha Builders Ltd"
-                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
+                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 sm:px-3.5 py-2 sm:py-2.5 text-[10px] sm:text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block text-[10px] sm:text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">
                     Phone Number (Rwanda) <span className="text-amber-600 dark:text-amber-400">*</span>
                   </label>
                   <input
@@ -300,56 +300,56 @@ export const QuoteRequestPage: React.FC<QuoteRequestPageProps> = ({
                     value={customerPhone}
                     onChange={(e) => setCustomerPhone(e.target.value)}
                     placeholder="+250 788 000 000"
-                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
+                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 sm:px-3.5 py-2 sm:py-2.5 text-[10px] sm:text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">
-                  Email Address <span className="text-slate-400 dark:text-slate-500 text-[11px]">(Optional)</span>
+                <label className="block text-[10px] sm:text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">
+                  Email Address <span className="text-slate-400 dark:text-slate-500 text-[10px] sm:text-[11px]">(Optional)</span>
                 </label>
                 <input
                   type="email"
                   value={customerEmail}
                   onChange={(e) => setCustomerEmail(e.target.value)}
                   placeholder="office@yourcompany.com"
-                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
+                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 sm:px-3.5 py-2 sm:py-2.5 text-[10px] sm:text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
                 />
               </div>
             </div>
 
             {/* 2. Materials List */}
-            <div className="space-y-4 pt-2">
-              <div className="flex items-center justify-between pb-2 border-b border-slate-200 dark:border-slate-800">
-                <h3 className="text-xs font-bold uppercase tracking-wider text-slate-800 dark:text-slate-300">
+            <div className="space-y-3 sm:space-y-4 pt-2">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-slate-200 dark:border-slate-800">
+                <h3 className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-800 dark:text-slate-300">
                   2. Requested Construction Materials <span className="text-amber-600 dark:text-amber-400">*</span>
                 </h3>
                 <button
                   type="button"
                   onClick={handleAddItem}
-                  className="text-xs font-semibold text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300 flex items-center gap-1 cursor-pointer"
+                  className="text-[10px] sm:text-xs font-semibold text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300 flex items-center gap-1 cursor-pointer self-start"
                 >
-                  <Plus className="w-3.5 h-3.5" />
+                  <Plus className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                   <span>Add Another Material</span>
                 </button>
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 {items.map((item, index) => (
                   <div
                     key={index}
-                    className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800/80 flex flex-col sm:flex-row items-stretch sm:items-center gap-3"
+                    className="p-2.5 sm:p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800/80 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3"
                   >
                     {/* Material Selector or Free text */}
                     <div className="flex-1">
-                      <label className="block text-[11px] text-slate-500 mb-1">
+                      <label className="block text-[10px] sm:text-[11px] text-slate-500 mb-1">
                         Select Material
                       </label>
                       <select
                         value={item.product_id}
                         onChange={(e) => handleSelectProduct(index, e.target.value)}
-                        className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-200 text-xs rounded-xl px-3 py-2 focus:outline-none focus:border-amber-400"
+                        className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-200 text-[10px] sm:text-xs rounded-xl px-2 sm:px-3 py-1.5 sm:py-2 focus:outline-none focus:border-amber-400"
                       >
                         {availableProducts.map((p) => (
                           <option key={p.id} value={p.id}>
@@ -361,7 +361,7 @@ export const QuoteRequestPage: React.FC<QuoteRequestPageProps> = ({
 
                     {/* Quantity */}
                     <div className="w-full sm:w-44">
-                      <label className="block text-[11px] text-slate-500 mb-1">
+                      <label className="block text-[10px] sm:text-[11px] text-slate-500 mb-1">
                         Quantity &amp; Specification
                       </label>
                       <input
@@ -370,7 +370,7 @@ export const QuoteRequestPage: React.FC<QuoteRequestPageProps> = ({
                         value={item.quantity}
                         onChange={(e) => handleUpdateItem(index, "quantity", e.target.value)}
                         placeholder="e.g. 50 bags, 2 tippers, 100 bars"
-                        className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-amber-400"
+                        className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-2 sm:px-3 py-1.5 sm:py-2 text-[10px] sm:text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-amber-400"
                       />
                     </div>
 
@@ -379,10 +379,10 @@ export const QuoteRequestPage: React.FC<QuoteRequestPageProps> = ({
                       <button
                         type="button"
                         onClick={() => handleRemoveItem(index)}
-                        className="p-2 self-end sm:self-center text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors mt-2 sm:mt-4 cursor-pointer"
+                        className="p-1.5 sm:p-2 self-end sm:self-center text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors mt-1 sm:mt-4 cursor-pointer"
                         title="Remove Item"
                       >
-                        <Trash2 className="w-4 h-4" />
+                        <Trash2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                       </button>
                     )}
                   </div>
@@ -391,14 +391,14 @@ export const QuoteRequestPage: React.FC<QuoteRequestPageProps> = ({
             </div>
 
             {/* 3. Delivery & Project Location */}
-            <div className="space-y-4 pt-2">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-slate-800 dark:text-slate-300 pb-2 border-b border-slate-200 dark:border-slate-800">
+            <div className="space-y-3 sm:space-y-4 pt-2">
+              <h3 className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-800 dark:text-slate-300 pb-2 border-b border-slate-200 dark:border-slate-800">
                 3. Delivery Location &amp; Project Schedule
               </h3>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
-                  <label className="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">
+                  <label className="block text-[10px] sm:text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">
                     Site Delivery Location (Kigali / Districts)
                   </label>
                   <input
@@ -406,25 +406,25 @@ export const QuoteRequestPage: React.FC<QuoteRequestPageProps> = ({
                     value={deliveryLocation}
                     onChange={(e) => setDeliveryLocation(e.target.value)}
                     placeholder="e.g. Kicukiro, Gasabo, Gisozi, Nyarugenge"
-                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
+                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 sm:px-3.5 py-2 sm:py-2.5 text-[10px] sm:text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">
-                    Target Delivery Date <span className="text-slate-400 dark:text-slate-500 text-[11px]">(Optional)</span>
+                  <label className="block text-[10px] sm:text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">
+                    Target Delivery Date <span className="text-slate-400 dark:text-slate-500 text-[10px] sm:text-[11px]">(Optional)</span>
                   </label>
                   <input
                     type="date"
                     value={preferredDate}
                     onChange={(e) => setPreferredDate(e.target.value)}
-                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
+                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 sm:px-3.5 py-2 sm:py-2.5 text-[10px] sm:text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">
+                <label className="block text-[10px] sm:text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">
                   Additional Project Specifications / Delivery Access Notes
                 </label>
                 <textarea
@@ -432,30 +432,30 @@ export const QuoteRequestPage: React.FC<QuoteRequestPageProps> = ({
                   value={additionalNotes}
                   onChange={(e) => setAdditionalNotes(e.target.value)}
                   placeholder="Mention site road access, crane/offloading requirements, or specific rebar diameters..."
-                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-3 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors resize-y"
+                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-2.5 sm:p-3 text-[10px] sm:text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors resize-y"
                 />
               </div>
             </div>
 
             {/* Submit Action */}
-            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <span className="text-[11px] text-slate-500 dark:text-slate-400">
+            <div className="pt-3 sm:pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+              <span className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400">
                 Inquiries are reviewed by our Kigali yard team Monday - Saturday.
               </span>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full sm:w-auto px-7 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 text-xs sm:text-sm font-bold shadow-xs disabled:opacity-50 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto px-5 sm:px-6 lg:px-7 py-2.5 sm:py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 text-[10px] sm:text-xs sm:text-sm font-bold shadow-xs disabled:opacity-50 transition-all flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer"
               >
                 {isSubmitting ? (
                   <>
-                    <span className="w-4 h-4 border-2 border-slate-950/40 border-t-slate-950 rounded-full animate-spin" />
+                    <span className="w-3.5 h-3.5 sm:w-4 sm:h-4 border-2 border-slate-950/40 border-t-slate-950 rounded-full animate-spin" />
                     <span>Transmitting Quotation...</span>
                   </>
                 ) : (
                   <>
-                    <FileText className="w-4 h-4" />
+                    <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     <span>Submit Quotation Request</span>
                   </>
                 )}
